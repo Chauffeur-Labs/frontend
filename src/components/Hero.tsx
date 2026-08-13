@@ -59,19 +59,19 @@ export default function Hero() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,_rgba(212,168,83,0.04)_0%,_transparent_50%)]" />
 
       <div className="relative mx-auto max-w-5xl text-center">
-        <span className="mb-6 inline-block rounded-full border border-gold/30 bg-gold/10 px-4 py-1.5 text-xs font-medium text-gold">
+        <span className="mb-6 inline-block animate-fade-in rounded-full border border-gold/30 bg-gold/10 px-4 py-1.5 text-xs font-medium text-gold">
           {HERO.badge}
         </span>
 
-        <h1 className="mb-6 text-4xl font-bold leading-tight tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+        <h1 className="mb-6 text-4xl font-bold leading-tight tracking-tight text-foreground animate-fade-in-up sm:text-5xl lg:text-6xl">
           {HERO.headline}
         </h1>
 
-        <p className="mx-auto mb-10 max-w-2xl text-lg leading-relaxed text-muted sm:text-xl">
+        <p className="mx-auto mb-10 max-w-2xl text-lg leading-relaxed text-muted animate-fade-in-up sm:text-xl" style={{ animationDelay: "0.15s" }}>
           {HERO.subheadline}
         </p>
 
-        <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <div className="flex flex-col items-center gap-4 animate-fade-in-up sm:flex-row sm:justify-center" style={{ animationDelay: "0.3s" }}>
           <a
             href="#cta"
             className="rounded-full bg-gold px-8 py-3.5 text-sm font-semibold text-black transition-colors hover:bg-gold-light"
@@ -86,7 +86,9 @@ export default function Hero() {
           </a>
         </div>
 
-        <CredentialCard />
+        <div className="animate-fade-in-up" style={{ animationDelay: "0.45s" }}>
+          <CredentialCard />
+        </div>
       </div>
     </section>
   );
