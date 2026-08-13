@@ -15,8 +15,25 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Chauffeur Labs",
-  description: "On-chain driver and valet credential protocol powered by Soulbound Tokens",
+  title: {
+    default: "Chauffeur Labs — On-Chain Driver Credentials",
+    template: "%s — Chauffeur Labs",
+  },
+  description:
+    "Soulbound Tokens for professional drivers and valet attendants. Verifiable, non-transferable credentials on Stellar Soroban.",
+  openGraph: {
+    title: "Chauffeur Labs — On-Chain Driver Credentials",
+    description:
+      "Soulbound Tokens for professional drivers and valet attendants. Verifiable, non-transferable credentials on Stellar Soroban.",
+    siteName: "Chauffeur Labs",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Chauffeur Labs — On-Chain Driver Credentials",
+    description:
+      "Soulbound Tokens for professional drivers and valet attendants. Verifiable, non-transferable credentials on Stellar Soroban.",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
