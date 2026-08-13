@@ -2,6 +2,7 @@ export const NAV_LINKS = [
   { label: "How It Works", href: "#how-it-works" },
   { label: "Features", href: "#features" },
   { label: "Use Cases", href: "#use-cases" },
+  { label: "About", href: "/about" },
 ] as const;
 
 export const HERO = {
@@ -146,6 +147,57 @@ export const STATS = [
   { value: "0", label: "Data Breaches" },
 ] as const;
 
+export const FAQ = [
+  {
+    question: "What is a Soulbound Token (SBT)?",
+    answer:
+      "A Soulbound Token is a non-transferable digital credential permanently linked to a wallet. Unlike regular NFTs, SBTs can't be sold, traded, or transferred. They represent verifiable credentials — like a driver's license that lives on-chain and can't be forged.",
+  },
+  {
+    question: "Is my personal data on the blockchain?",
+    answer:
+      "No. Only a cryptographic hash of your credentials goes on-chain. Your actual personal data — name, license number, background check results — stays off-chain, encrypted, and under your control. Venues verify the proof without seeing the raw data.",
+  },
+  {
+    question: "Who can issue credentials?",
+    answer:
+      "Only authorized attestation partners can issue SBTs. These include licensed background check providers, state DMVs, insurance companies, and verified fleet operators. Each issuer is vetted and registered on-chain.",
+  },
+  {
+    question: "Can my credential be revoked?",
+    answer:
+      "Yes. Credentials can be revoked by authorized issuers — for example, if a license is suspended or a background check reveals new disqualifying information. The revocation reason is recorded on-chain for transparency.",
+  },
+  {
+    question: "Why Stellar Soroban?",
+    answer:
+      "Stellar offers sub-second finality, near-zero transaction fees, and a mature smart contract platform. It's optimized for real-world financial applications, making it ideal for credential verification that needs to be fast, cheap, and reliable.",
+  },
+  {
+    question: "How much does it cost?",
+    answer:
+      "Minting a credential costs fractions of a cent on Stellar. Verification queries are free for venues. Fleet management has a monthly subscription based on the number of active drivers.",
+  },
+] as const;
+
+export const PROTOCOL_LAYERS = [
+  {
+    layer: "Application Layer",
+    description: "Fleet dashboards, venue verification portals, driver mobile apps",
+    items: ["Fleet Manager Dashboard", "Venue Verification Portal", "Driver Credential Wallet"],
+  },
+  {
+    layer: "Protocol Layer",
+    description: "Smart contracts handling credential lifecycle on Soroban",
+    items: ["Credential Issuance", "Verification Queries", "Revocation Management", "Trip Recording"],
+  },
+  {
+    layer: "Storage Layer",
+    description: "On-chain hashes with off-chain encrypted data",
+    items: ["Stellar Ledger (hashes)", "Encrypted Off-Chain Store", "IPFS (attestation docs)"],
+  },
+] as const;
+
 export const FOOTER = {
   tagline: "Verifiable credentials for the automotive service industry.",
   columns: [
@@ -170,7 +222,7 @@ export const FOOTER = {
     {
       title: "Company",
       links: [
-        { label: "About", href: "#" },
+        { label: "About", href: "/about" },
         { label: "Blog", href: "#" },
         { label: "Careers", href: "#" },
         { label: "Contact", href: "#" },
